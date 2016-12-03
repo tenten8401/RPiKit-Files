@@ -8,15 +8,13 @@ auto wlan1
 iface eth0 inet dhcp
 iface lo inet loopback
 
-allow-hotplug wlan0
 allow-hotplug wlan1
-
 iface wlan1 inet dhcp
 wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 
-iface wlan0 inet static
-  address 192.168.50.1
-  netmask 255.255.255.0
-  network 192.168.50.0
-  broadcast 192.168.50.255
-  gateway 192.168.50.1
+allow-hotplug wlan0  
+iface wlan0 inet static  
+    address 172.24.1.1
+    netmask 255.255.255.0
+    network 172.24.1.0
+    broadcast 172.24.1.255
