@@ -7,4 +7,4 @@ sed -i '/randomize.sh/d' /etc/rc.local
 
 rm $0
 
-systemctl restart hostapd
+reboot
