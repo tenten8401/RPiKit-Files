@@ -3,13 +3,13 @@ source-directory /etc/network/interfaces.d
 auto lo
 auto eth0
 auto wlan0
-auto wlan1
+auto wlan_ap
 
 iface eth0 inet dhcp
 iface lo inet loopback
 
-allow-hotplug wlan0  
-iface wlan0 inet static  
+allow-hotplug wlan_ap  
+iface wlan_ap inet static  
     address 172.24.1.1
     netmask 255.255.255.0
     network 172.24.1.0
