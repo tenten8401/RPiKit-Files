@@ -1,12 +1,9 @@
 source-directory /etc/network/interfaces.d
 
 auto lo
-auto eth0
-auto wlan0
-auto wlan_ap
 
-iface eth0 inet dhcp
 iface lo inet loopback
+iface eth0 inet dhcp
 
 allow-hotplug wlan_ap  
 iface wlan_ap inet static  
@@ -15,6 +12,6 @@ iface wlan_ap inet static
     network 172.24.1.0
     broadcast 172.24.1.255
 
-allow-hotplug wlan1
-iface wlan1 inet dhcp
+allow-hotplug wlan_st
+iface wlan_st inet dhcp
 wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
