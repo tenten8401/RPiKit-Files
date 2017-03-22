@@ -1,7 +1,7 @@
 [Unit]
 Description=Hostapd IEEE 802.11 Access Point
-After=sys-subsystem-net-devices-wlan0.device
-BindsTo=sys-subsystem-net-devices-wlan0.device
+After=sys-subsystem-net-devices-wlan_ap.device
+BindsTo=sys-subsystem-net-devices-wlan_ap.device
 
 [Service]
 Type=forking
